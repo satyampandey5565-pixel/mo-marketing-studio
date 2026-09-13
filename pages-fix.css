@@ -1,6 +1,6 @@
 @import url('luxury-v2.css');
 
-/* AUREL — final hero / menu hotfix */
+/* AUREL — hero composition / centered typography */
 [hidden]{display:none!important}
 .mobile-nav[hidden]{display:none!important}
 
@@ -14,11 +14,12 @@
 .nav{display:flex!important;gap:42px!important;align-items:center!important}.nav a{font:500 10px/1 var(--sans)!important;letter-spacing:.22em!important;color:rgba(255,250,244,.94)!important;text-transform:uppercase!important}.nav a:after{background:#fff!important}
 .menu{display:none!important}
 
-.hero-copy{position:relative!important;z-index:8!important;width:min(760px,90%)!important;text-align:center!important;padding:0!important;margin:34px auto 0!important;color:#fffaf4!important}
-.hero-copy .kicker{font:500 9px/1 var(--sans)!important;letter-spacing:.42em!important;color:rgba(255,247,238,.92)!important;margin-bottom:25px!important}
-.hero-copy h1{font:500 clamp(72px,8.2vw,132px)/.72 var(--serif)!important;letter-spacing:-.055em!important;margin:0 0 36px!important;color:#fffaf4!important;text-shadow:0 2px 28px rgba(0,0,0,.22)!important}.hero-copy h1 em{font-style:italic!important;font-weight:400!important;color:#f6eee3!important}
+/* Main hero copy is optically centered in the viewport, not pushed toward the bottom. */
+.hero-copy{position:absolute!important;z-index:8!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;width:min(820px,90%)!important;text-align:center!important;padding:0!important;margin:0!important;color:#fffaf4!important}
+.hero-copy .kicker{font:500 9px/1 var(--sans)!important;letter-spacing:.42em!important;color:rgba(255,247,238,.92)!important;margin:0 0 25px!important}
+.hero-copy h1{font:500 clamp(72px,8.2vw,132px)/.76 var(--serif)!important;letter-spacing:-.055em!important;margin:0 0 32px!important;color:#fffaf4!important;text-shadow:0 2px 28px rgba(0,0,0,.22)!important}.hero-copy h1 em{font-style:italic!important;font-weight:400!important;color:#f6eee3!important}
 .hero-copy .intro{max-width:540px!important;font:400 15px/1.55 var(--serif)!important;color:rgba(255,248,240,.94)!important;margin:0 auto!important}
-.hero-copy .discover{margin-top:34px!important;display:inline-flex!important;align-items:center!important;gap:24px!important;border:1px solid rgba(255,255,255,.68)!important;padding:17px 28px!important;color:#fff!important;background:rgba(30,17,9,.12)!important;font-size:9px!important;letter-spacing:.25em!important}.hero-copy .discover b{border:0!important;width:auto!important;height:auto!important;font-size:16px!important}
+.hero-copy .discover{margin:30px auto 0!important;display:inline-flex!important;align-items:center!important;gap:24px!important;border:1px solid rgba(255,255,255,.68)!important;padding:17px 28px!important;color:#fff!important;background:rgba(30,17,9,.12)!important;font-size:9px!important;letter-spacing:.25em!important}.hero-copy .discover b{border:0!important;width:auto!important;height:auto!important;font-size:16px!important}
 .hero-side{position:absolute!important;z-index:8!important;bottom:27px!important;left:3.8vw!important;right:3.8vw!important;display:flex!important;justify-content:space-between!important;color:rgba(255,248,240,.9)!important;font-size:8px!important;letter-spacing:.25em!important}.hero-side span:last-child:after{content:"";display:block;width:42px;height:1px;background:rgba(255,255,255,.65);margin-top:13px}
 .hero *, .hero *:before, .hero *:after{animation:none!important;transition:none!important}
 
@@ -28,8 +29,8 @@
   .menu{display:flex!important;width:38px!important;height:38px!important;padding:0!important;border:1px solid rgba(255,255,255,.35)!important;border-radius:50%!important;background:transparent!important;align-items:center!important;justify-content:center!important;flex-direction:column!important;gap:5px!important}.menu i{display:block!important;width:13px!important;height:1px!important;background:#fff!important}
   .mobile-nav{position:fixed!important;inset:68px 0 0!important;height:calc(100dvh - 68px)!important;display:flex!important;flex-direction:column!important;justify-content:center!important;padding:30px 22px!important;background:#120c08!important;z-index:55!important}.mobile-nav[hidden]{display:none!important}.mobile-nav nav{display:flex!important;flex-direction:column!important;gap:7px!important}.mobile-nav a{font:500 17vw/.82 var(--lux-serif)!important;letter-spacing:-.045em!important;color:#eee8df!important;text-decoration:none!important}
   .hero{min-height:100svh!important;height:100svh!important;padding-top:68px!important}.hero:before{background-position:center!important;filter:saturate(.72) sepia(.08) brightness(.7)!important}
-  .hero-copy{width:90%!important;margin:20px auto 0!important}.hero-copy .kicker{font-size:7px!important;letter-spacing:.28em!important;margin-bottom:20px!important}.hero-copy h1{font-size:19vw!important;line-height:.75!important;margin-bottom:28px!important}.hero-copy .intro{font-size:12px!important;line-height:1.6!important;max-width:310px!important}.hero-copy .discover{font-size:8px!important;padding:14px 18px!important;margin-top:26px!important}.hero-side{bottom:18px!important;left:18px!important;right:18px!important}
+  .hero-copy{left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;width:92%!important;margin:0!important}.hero-copy .kicker{font-size:7px!important;letter-spacing:.28em!important;margin-bottom:20px!important}.hero-copy h1{font-size:18.5vw!important;line-height:.76!important;margin-bottom:26px!important}.hero-copy .intro{font-size:12px!important;line-height:1.6!important;max-width:310px!important}.hero-copy .discover{font-size:8px!important;padding:14px 18px!important;margin-top:24px!important}.hero-side{bottom:18px!important;left:18px!important;right:18px!important}
 }
-@media(max-width:420px){.hero-copy h1{font-size:20vw!important}.hero-copy .intro{font-size:11px!important}}
+@media(max-width:420px){.hero-copy h1{font-size:19vw!important}.hero-copy .intro{font-size:11px!important}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media(pointer:coarse){.cursor-dot,.cursor-ring{display:none!important}}
