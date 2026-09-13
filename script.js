@@ -1,9 +1,9 @@
 const menu=document.querySelector('.menu'),mobile=document.querySelector('#mobileNav');
 menu?.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')==='true';menu.setAttribute('aria-expanded',String(!open));mobile.hidden=open;document.body.style.overflow=open?'hidden':'';menu.setAttribute('aria-label',open?'Open menu':'Close menu')});
 mobile?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobile.hidden=true;menu.setAttribute('aria-expanded','false');document.body.style.overflow=''}));
-const viewer=document.querySelector('#viewer'),viewerName=document.querySelector('#viewerName');
-document.querySelectorAll('.piece-art').forEach(btn=>btn.addEventListener('click',()=>{viewer.hidden=false;viewerName.textContent=btn.dataset.name;document.body.style.overflow='hidden'}));
-function closeViewer(){viewer.hidden=true;document.body.style.overflow=''}
+const viewer=document.querySelector('#viewer'),viewerName=document.querySelector('#viewerName'),viewerArt=document.querySelector('.viewer-art');
+document.querySelectorAll('.piece-art').forEach(btn=>btn.addEventListener('click',()=>{viewer.hidden=false;viewerName.textContent=btn.dataset.name;const image=btn.dataset.image;if(image){viewerArt.innerHTML=`<img src="${image}" alt="${btn.dataset.name}">`;viewerArt.style.cssText='width:min(900px,90vw);height:min(78vh,900px);background:#111;display:grid;place-items:center;overflow:hidden';viewerArt.querySelector('img').style.cssText='width:100%;height:100%;object-fit:contain';}document.body.style.overflow='hidden'}));
+function closeViewer(){viewer.hidden=true;document.body.style.overflow='';if(viewerArt)viewerArt.innerHTML=''}
 document.querySelector('.viewer-close')?.addEventListener('click',closeViewer);viewer?.addEventListener('click',e=>{if(e.target===viewer)closeViewer()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(!viewer.hidden)closeViewer();if(!mobile.hidden){mobile.hidden=true;menu.setAttribute('aria-expanded','false');document.body.style.overflow=''}}});
 const form=document.querySelector('#contactForm'),status=document.querySelector('#status');
