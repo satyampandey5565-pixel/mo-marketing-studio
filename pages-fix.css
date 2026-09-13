@@ -1,0 +1,2 @@
+.mobile-nav[hidden]{display:none!important}
+@media (max-width:800px){.mobile-nav[hidden]{display:none!important}.menu{display:block}.nav{display:none}}
